@@ -1,0 +1,68 @@
+.userEngagementWrapper {
+    flex: 4;
+    -webkit-box-shadow: 0px 0px 11px -1px #666666; 
+    box-shadow: 0px 0px 11px -1px #666666;
+    border-radius: 10px;
+    padding: 0 20px 20px;
+    margin: 20px;
+    height: 500px;
+    overflow: auto;
+}
+
+.userEngagementTitle {
+    font-size: 22px;
+    font-weight: 600;
+    position: sticky;
+    top: 0;
+    background-color: #ffffff;
+    padding: 10px 0;
+    margin: 10px 0;
+    color: #555
+}
+
+.userEngegement {
+    overflow-x: none !important;
+}
+
+.userEngagementUser {
+    display: flex;
+    align-items: center;
+}
+
+.userEngagementImage {
+    width: 32px;
+    height: 32px;
+    border-radius: 50px;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.userEngagementView {
+    border: none;
+    border-radius: 10px;
+    padding: 5px 10px;
+    background-color: #89f0a3;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.userEngagementDelete {
+    color: red !important;
+    cursor: pointer
+}
+
+.userEngagementButton {
+    display: flex;
+    align-items: center;
+    border: none;
+    border-radius: 10px;
+    padding: 7px 10px;
+    background-color: #eeeef7;
+    color: #555;
+    cursor: pointer;
+}
+
+.userEngagementIcon {
+    font-size: 16px !important;
+    margin-right: 5px !important
+}

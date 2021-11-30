@@ -1,0 +1,115 @@
+.user {
+    flex: 4;
+    padding: 20px;
+}
+
+.userTitleContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.userAddButton {
+    width: 80px;
+    border: none;
+    padding: 5px;
+    background-color: teal;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #fff;
+}
+
+.userContainer {
+    display: flex;
+    margin-top: 20px;
+}
+
+.userShow {
+    flex: 1;
+    padding: 20px;
+    -webkit-box-shadow: 0px 0px 11px -1px #666666; 
+    box-shadow: 0px 0px 11px -1px #666666;
+    border-radius: 10px;
+}
+
+.userUpdate {
+    flex: 1;
+    padding: 20px;
+    -webkit-box-shadow: 0px 0px 11px -1px #666666; 
+    box-shadow: 0px 0px 11px -1px #666666;
+    margin-left: 20px;
+    border-radius: 10px
+}
+
+.userShowTop {
+    display: flex;
+    align-items: center;
+}
+
+.userShowImage {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.userShowTopTitle {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+}
+
+
+.userShowName {
+    font-weight: 600;
+    font-size: 25px;
+}
+
+.userShowUserNameParent {
+    display: flex;
+    align-items: center;
+}
+
+.userShowUserName {
+    font-weight: 300
+}
+
+.userShowBottom {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.userShowInfo {
+    margin-bottom: 20px;
+}
+
+.userShowInfoIcon {
+    margin-right: 10px !important;
+    font-size: 15px !important;
+}
+
+.userShowInfoTitle {
+    font-weight: 600;
+}
+
+.userShowInfoLocation {
+    font-weight: 300;
+}
+
+.userShowInfoAddress {
+    font-weight: 300;
+}
+
+.userShowInfoGender {
+    font-weight: 300;
+}
+
+.userShowInfoEmail {
+    font-weight: 300;
+}
+
+.userShowInfoFriends {
+    font-weight: 300;
+}
