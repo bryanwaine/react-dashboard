@@ -3,8 +3,7 @@
     -webkit-box-shadow: 0px 0px 11px -1px #666666; 
     box-shadow: 0px 0px 11px -1px #666666;
     border-radius: 10px;
-    padding: 0 20px 20px;
-    margin: 20px;
+    padding: 0 20px;
     height: 500px;
     overflow: auto;
 }

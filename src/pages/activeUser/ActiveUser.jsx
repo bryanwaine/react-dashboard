@@ -5,6 +5,7 @@ import { activeUserRows } from '../../dummyData';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import { BarChart, XAxis, CartesianGrid, Tooltip, Bar } from 'recharts';
+import UserEngagement from '../../components/userEngagement/UserEngagement';
 
 export default function ActiveUser() {
     const [data, setData] = useState(activeUserRows);
@@ -41,29 +42,37 @@ export default function ActiveUser() {
       },
     ];
     return (
-        <div className='activeUser'>
-            <h3 className='activeUserTitle'>User Engagement</h3>
-        <section className="activeUserBar">
-            <h3 className="activeUserBarTitle">Total active users by country</h3>
-            <BarChart width={1000} height={250} data={activeUserRows}>
-            <CartesianGrid strokeDasharray='3 3' />
-            <XAxis dataKey='country' />
-            <Tooltip />
-            <Bar dataKey='activeUsers' fill='#8884d8' />
+      <div className='activeUser'>
+        <main className='activeUserWrapper'>
+          <h3 className='activeUserTitle'>User Engagement</h3>
+          <section className='activeUserBar'>
+            <h3 className='activeUserBarTitle'>
+              Total active users by country
+            </h3>
+            <BarChart width={900} height={250} data={activeUserRows}>
+              <CartesianGrid strokeDasharray='3 3' />
+              <XAxis dataKey='country' />
+              <Tooltip />
+              <Bar dataKey='activeUsers' fill='#8884d8' />
             </BarChart>
-        </section>
-        <section className="activeUserTable">
+          </section>
+          <section className='activeUserTable'>
+            <h3 className='activeUserTableTitle'>
+              Total active users by country
+            </h3>
             <div style={{ height: 400, width: '100%' }} className='referrals'>
-            <DataGrid
+              <DataGrid
                 rows={data}
                 columns={columns}
                 pageSize={5}
                 rowsPerPageOptions={[5]}
                 checkboxSelection
                 disableSelectionOnClick
-            />
-            </div>            
-        </section>
-        </div>
-    )
+              />
+            </div>
+          </section>
+            <UserEngagement/>
+        </main>
+      </div>
+    );
 }

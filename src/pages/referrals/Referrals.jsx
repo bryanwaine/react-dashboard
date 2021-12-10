@@ -1,7 +1,9 @@
 import './referral.css'
+import Chart from '../../components/chart/Chart';
 import { DataGrid } from '@material-ui/data-grid';
 import { DeleteOutline } from '@material-ui/icons';
 import { referralsRows } from '../../dummyData';
+import { userData } from '../../dummyData';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import {
@@ -51,29 +53,37 @@ export default function Referrals() {
 
     return (
       <div className='referrals'>
-        <h3 className='referralsTitle'>Referrals</h3>
-        <section className="referralsBar">
-            <h3 className="referralsBarTitle">Total referrals by country</h3>
-            <BarChart width={1000} height={250} data={referralsRows}>
-            <CartesianGrid strokeDasharray='3 3' />
-            <XAxis dataKey='country' />
-            <Tooltip />
-            <Legend />
-            <Bar dataKey='referrals' fill='#8884d8' />
+        <main className='referralsWrapper'>
+          <h3 className='referralsTitle'>Referrals</h3>
+            <Chart
+              data={userData}
+              title='Total referrals per month (2021)'
+              dataKey='Referrals'
+              grid
+            />
+          <section className='referralsBar'>
+            <h3 className='referralsBarTitle'>Total referrals by country</h3>
+            <BarChart width={900} height={250} data={referralsRows}>
+              <CartesianGrid strokeDasharray='3 3' />
+              <XAxis dataKey='country' />
+              <Tooltip />
+              <Legend />
+              <Bar dataKey='referrals' fill='#8884d8' />
             </BarChart>
-        </section>
-        <section className="referralsTable">
+          </section>
+          <section className='referralsTable'>
             <div style={{ height: 400, width: '100%' }} className='referrals'>
-            <DataGrid
+              <DataGrid
                 rows={data}
                 columns={columns}
                 pageSize={5}
                 rowsPerPageOptions={[5]}
                 checkboxSelection
                 disableSelectionOnClick
-            />
-            </div>            
-        </section>
+              />
+            </div>
+          </section>
+        </main>
       </div>
     );
 }

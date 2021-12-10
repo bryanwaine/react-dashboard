@@ -41,7 +41,11 @@ export default function Sidebar() {
                 </NavLink>
               </li>
               <li className=''>
-                <NavLink to={`/activeUsers`} className='Link sidebarListItem'>
+                <NavLink
+                  to={`/activeUsers`}
+                  className='Link sidebarListItem'
+                  activeClassName='active'
+                >
                   <Computer className='sidebarIcon' />
                   Engagement
                 </NavLink>
